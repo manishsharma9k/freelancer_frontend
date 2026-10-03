@@ -1,0 +1,150 @@
+.featured-gigs {
+  padding: 80px 0;
+}
+
+.gigs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gig-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.25s;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.gig-card:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+
+.gig-img {
+  position: relative;
+  height: 180px;
+}
+
+.gig-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gig-img-placeholder span {
+  color: rgba(255,255,255,0.5);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.gig-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--primary);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gig-body {
+  padding: 16px;
+  flex: 1;
+}
+
+.seller-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.seller-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.seller-info span {
+  font-size: 13px;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.gig-body h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.gig-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stars {
+  color: #f5a623;
+  font-size: 14px;
+}
+
+.rating-num {
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 13px;
+  margin-left: 4px;
+}
+
+.review-count {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.gig-footer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.from {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+@media (max-width: 1024px) {
+  .gigs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .gigs-grid { grid-template-columns: 1fr; }
+  .featured-gigs { padding: 50px 0; }
+}
